@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!-- Document Heading -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Descriptions -->
+    <meta name="description" content="18 de Abril de 2026 | Boqueirão Hotel Fazenda">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fernanda e Bernardo">
+    <meta property="og:description" content="18 de Abril de 2026 | Boqueirão Hotel Fazenda">
+    <meta property="og:image" content="https://fernandaebernardo.com/images/cover.webp"> <!-- Substitua pelo caminho da sua imagem -->
+    <meta property="og:url" content="https://fernandaebernardo.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fernanda e Bernardo">
+    <meta name="twitter:description" content="18 de Abril de 2026 | Boqueirão Hotel Fazenda">
+    <meta name="twitter:image" content="https://fernandaebernardo.com/images/cover.webp"> <!-- Substitua pelo caminho da sua imagem -->
+
+    <link href="css/grid.css" rel="stylesheet"> <!-- Link to CSS grid -->
+    <link href="css/main.css" rel="stylesheet"> <!-- Link to Main CSS file -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=MonteCarlo&display=swap" rel="stylesheet">
+    
+    <!-- Font awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Script tags with defer attribute -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> <!-- link to greensock main library and scroll plugin -->
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script type="module" src="js/main.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/monograma-x.svg">
+
+    <!-- Document Title -->
+    <title>Fernanda e Bernardo</title> 
+</head>
+
+<!-- Documemnt Body -->
+<body>
+    <h1 class="hidden">Traje Passeio Completo</h1>
+
+    <!-- Header -->
+    <div id="sticky-nav-con">
+        <h2 class="hidden">Header</h2>
+        <header>
+            <!-- Main Navigation -->
+            <nav class="navbar-header grid-con">
+                <h3 class="hidden">Main Navigation</h3>
+
+                <div class="logo-header col-start-1">
+                    <a href="index.html"><img src="./images/monograma-verde.svg" alt="Fernanda e Bernardo Monograma"></a>
+                </div>
+
+                <button id="burger-button"></button>
+
+                <div class="links-header">
+                    <h4 class="hidden">Links Header</h4>
+                    <ul>
+                        <li><a href="index.html" class="nav-item"><h5>Início</h5></a></li>
+                        <li><a href="index.html#detalhes" class="nav-item"><h5>Detalhes</h5></a></li>
+                        <li><a href="index.html#rsvp" class="nav-item"><h5>RSVP</h5></a></li>
+                        <li><a href="index.html#presentes" class="nav-item"><h5>Presentes</h5></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <h2 class="hidden">Main Content</h2>
+
+        <!-- Gifts Section -->
+        <section id="presentes" class="grid-con">
+            <h3 class="hidden">Traje Passeio Completo</h3>
+            <div class="gifts-con col-span-full">
+                <img src="./images/dresscode.svg" alt="Ícone de Dresscode">
+                <h4>Traje Passeio Completo</h4>
+                <p>O traje passeio completo é um código de vestimenta formal usado em eventos como casamentos, formaturas e celebrações mais elegantes.</p>
+                <p>Para homens, costuma incluir terno, camisa social, sapatos mais sociais e gravata.</p>
+                <p>Para mulheres, são recomendados vestidos longos ou midi, ou conjuntos mais arrumados. A ideia é apenas manter um visual elegante e bem-cuidado, com acessórios simples ou mais trabalhados conforme o gosto pessoal.</p>
+            </div>
+        </section>
+
+        <!-- Help Container -->
+        <div class="help-con full-width-grid-con">
+                <p class="help-text col-span-full">Precisa de ajuda para se organizar ou tem alguma dúvida?<br></p>
+                <a href="#">Converse com a ORGANIZAÇÃO</a>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer full-width-grid-con">
+            <h3 class="hidden">Footer</h3>
+            <div class="footer-con col-span-full">
+                <a href="index.html" class="back-to-top">
+                    Voltar ao início <i class="fa-solid fa-arrow-up"></i>
+                </a>
+                <h4 class="footer-date">18 de Abril de 2026</h4>
+                <p class="footer-location">Boqueirão Hotel Fazenda<br>Rodovia BR-282, KM 228, Lages, SC</p>   
+            </div>
+            <img class="footer-image col-span-full" src="./images/ilustracao-rodape.png" alt="Ilustração de Rodapé">
+        </footer>
+    </main>
+</body>
+
+</html>

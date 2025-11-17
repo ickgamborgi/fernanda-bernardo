@@ -2,7 +2,6 @@
 
 #presentes {
     margin-top: a.$section-gap;
-    margin-bottom: a.$section-gap;
 }
 
 .gifts-con {
@@ -23,7 +22,7 @@
         text-transform: uppercase;
         color: a.$light-green;
         font-weight: 800;
-        margin-bottom: 015px;
+        margin-bottom: 15px;
     }
 
     p {
@@ -32,10 +31,14 @@
         color: a.$green;
         font-weight: 100;
         max-width: 500px;
+
+        &:last-of-type {
+            margin-bottom: 15px;
+        }
     }
 }
 
-.gifts-button {
+.gifts-button, .gift-list-button {
         border: 1px solid a.$olive-green;
         padding: 15px 30px;
         color: a.$olive-green;
@@ -44,10 +47,10 @@
         font-size: a.$body;
         text-transform: uppercase;
         font-weight: 600;
-        margin-top: 15px;
         box-shadow: a.$blur-shadow;
         transition: a.$basic-transition;
         cursor: pointer;
+        text-align: center;
 
         &:hover {
             background-color: a.$green;
@@ -58,6 +61,103 @@
         }
 }
 
+
+// Pagina
+#presentes-lista {
+    margin-top: 50px;
+    margin-bottom: a.$section-gap;
+}
+
+.gift-list-con {
+    display: grid;
+    /* Desktop: 3 columns centered; remaining space becomes margin via max-width + auto margins */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    justify-items: center;
+    align-content: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gift {
+    box-shadow: a.$blur-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    width: 100%; /* take full width of the grid cell */
+    transition: a.$basic-transition;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &:hover {
+        box-shadow: a.$click-shadow;
+        transition: a.$basic-transition;
+        transform: scale(1.05);
+    }
+}
+
+.gift-info {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 25px;
+    justify-content: space-between;
+
+    h5 {
+        font-family: a.$caveat;
+        font-size: 24px;
+        font-weight: 800;
+        color: a.$light-green;
+        text-transform: capitalize;
+        margin: 0;
+    }
+
+    p {
+        font-family: a.$caveat;
+        font-size: 17px;
+        font-weight: 400;
+        color: a.$olive-green;
+        margin: 0;
+
+        span {
+            font-size: 36px;
+            font-weight: 800;
+        }
+    }
+}
+
 //  Responsive
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    /* Tablet: 2 columns */
+    .gift-list-con {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile: single column and stack gift-info vertically */
+    .gift-list-con {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 12px;
+    }
+
+    .gift {
+        padding: 12px;
+    }
+
+    .gift-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
 }
