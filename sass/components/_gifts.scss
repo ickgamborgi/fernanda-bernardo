@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as a;
+
+#presentes {
+    margin-top: a.$section-gap;
+    margin-bottom: a.$section-gap;
+}
+
+.gifts-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    img {
+        width: 100px;
+    }
+
+    h4 {
+        font-family: a.$eb-garamond;
+        font-size: a.$subtitle;
+        text-transform: uppercase;
+        color: a.$light-green;
+        font-weight: 800;
+        margin-bottom: 015px;
+    }
+
+    p {
+        line-height: 130%;
+        font-size: a.$body;
+        color: a.$green;
+        font-weight: 100;
+        max-width: 500px;
+    }
+}
+
+.gifts-button {
+        border: 1px solid a.$olive-green;
+        padding: 15px 30px;
+        color: a.$olive-green;
+        background-color: transparent;
+        font-family: a.$eb-garamond;
+        font-size: a.$body;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 15px;
+        box-shadow: a.$blur-shadow;
+        transition: a.$basic-transition;
+        cursor: pointer;
+
+        &:hover {
+            background-color: a.$green;
+            border: 1px solid a.$green;
+            color: a.$cream;
+            box-shadow: a.$click-shadow;
+            transition: a.$basic-transition;
+        }
+}
+
+//  Responsive
+@media (max-width: 768px) {
+}
