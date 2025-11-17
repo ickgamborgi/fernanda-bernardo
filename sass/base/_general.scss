@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as a;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  transition: a.$basic-transition;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+p {
+  font-family: a.$eb-garamond;
+  line-height: 170%;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: a.$eb-garamond;
+  line-height: 120%;
+}
+
+main {
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+// Video Player
+
+:root {
+  --plyr-color-main: #39a3bc;
+  --plyr-control-icon-size: 1rem;
+  --plyr-control-radius: 35px;
+  --plyr-video-controls-background: rgba(255, 255, 255, 0);
+
+}
+
+.video-holder {
+  height: fit-content;
+  box-shadow: a.$blur-shadow;
+  padding: 0;
+  border-radius: a.$round-border;
+  overflow: hidden;
+}
+
+.video-holder .plyr__controls {
+  margin: 15px;
+  cursor: pointer;
+}
+
+// ---Desktop Styles---
+@media screen and (min-width: 1200px) {
+}

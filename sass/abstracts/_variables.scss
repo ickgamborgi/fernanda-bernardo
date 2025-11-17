@@ -1,0 +1,31 @@
+// Variables
+
+//  Stores SASS variables like colors, font sizes, spacing, and other values that are likely to be reused.
+
+// @use "fonts" as f;
+
+// Colors
+$dark-green: #344128;
+$green:    #415534;
+$light-green:        #5e753f;
+$olive-green:  #98a769;
+$light-olive: #e5edc0;
+$cream:#fefdf0;
+
+$overlay: rgba(52, 65, 40, 0.6);
+
+// Fonts (imported from fonts.scss)
+$montecarlo: "MonteCarlo", cursive;
+$eb-garamond: "EB Garamond", serif;
+
+$title: 36px;
+$subtitle: 30px;
+$body: 15px;
+
+//Others
+$blur-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$click-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+$round-border: 35px;
+$section-gap: 100px;
+$basic-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);

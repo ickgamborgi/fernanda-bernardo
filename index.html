@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!-- Document Heading -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Descriptions -->
+    <meta name="description" content="18 de Abril de 2026 | Boqueirão Hotel Fazenda">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fernanda e Bernardo">
+    <meta property="og:description" content="18 de Abril de 2026 | Boqueirão Hotel Fazenda">
+    <meta property="og:image" content="https://fernandaebernardo.com/images/cover.webp"> <!-- Substitua pelo caminho da sua imagem -->
+    <meta property="og:url" content="https://fernandaebernardo.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fernanda e Bernardo">
+    <meta name="twitter:description" content="18 de Abril de 2026 | Boqueirão Hotel Fazenda">
+    <meta name="twitter:image" content="https://fernandaebernardo.com/images/cover.webp"> <!-- Substitua pelo caminho da sua imagem -->
+
+    <link href="css/grid.css" rel="stylesheet"> <!-- Link to CSS grid -->
+    <link href="css/main.css" rel="stylesheet"> <!-- Link to Main CSS file -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=MonteCarlo&display=swap" rel="stylesheet">
+
+    
+    <!-- Font awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Script tags with defer attribute -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> <!-- link to greensock main library and scroll plugin -->
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script type="module" src="js/main.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/monograma-x.svg">
+
+    <!-- Document Title -->
+    <title>Fernanda e Bernardo</title> 
+</head>
+
+<!-- Documemnt Body -->
+<body>
+    <h1 class="hidden">Fernanda e Bernardo</h1>
+
+    <!-- Header -->
+    <div id="sticky-nav-con">
+        <h2 class="hidden">Header</h2>
+        <header>
+            <!-- Main Navigation -->
+            <nav class="navbar-header grid-con">
+                <h3 class="hidden">Main Navigation</h3>
+
+                <div class="logo-header col-start-1">
+                    <a href="index.html"><img src="./images/monograma-verde.svg" alt="Fernanda e Bernardo Monograma"></a>
+                </div>
+
+                <button id="burger-button"></button>
+
+                <div class="links-header">
+                    <h4 class="hidden">Links Header</h4>
+                    <ul>
+                        <li><a href="index.html" class="nav-item"><h5>Início</h5></a></li>
+                        <li><a href="index.html#detalhes" class="nav-item"><h5>Detalhes</h5></a></li>
+                        <li><a href="index.html#rsvp" class="nav-item"><h5>RSVP</h5></a></li>
+                        <li><a href="index.html#presentes" class="nav-item"><h5>Presentes</h5></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <h2 class="hidden">Main Content</h2>
+
+        <!-- Hero Section -->
+        <section id="hero" class="full-width-grid-con">
+            <h3 class="hidden">Hero</h3>
+            <div class="overlay"></div>
+            <img src="./images/logotipo-creme.svg" alt="Fernanda e Bernardo Logotipo" class="hero-logo">
+        </section>
+
+        <!-- Details Section -->
+        <section id="detalhes" class="grid-con">
+            <h3 class="hidden">Detalhes</h3>
+            <div class="col-span-full hero-date-con">
+                <div class="hero-date">
+                <h4>18 de Abril de 2026</h4>
+            </div>
+            </div>
+            <div class="hero-intro col-span-full">
+                <h4>Estamos muito felizes em celebrar esta data tão especial com vocês!</h4>
+            </div>
+            <div class="details-con col-span-full">
+                <h4 class="hidden">Itens de Detalhes</h4>
+                <div class="details-item">
+                    <img src="./images/cerimonia.svg" alt="Ícone de Cerimônia">
+                    <h5>Cerimônia</h5>
+                    <p>A cerimônia terá início às 15h, em um cenário encantador ao ar livre, cercado pela natureza e boas energias</p>
+                </div>
+                <div class="details-item">
+                    <img src="./images/recepcao.svg" alt="Ícone de Recepção">
+                    <h5>Recepção</h5>
+                    <p> Logo após, continuaremos a festa no mesmo local, celebrando juntos cada instante</p>
+                </div>
+                <div class="details-item">
+                    <img src="./images/local.svg" alt="Ícone de local">
+                    <h5>Local</h5>
+                    <p><a class="details-button" href="#">Boqueirão Hotel Fazenda</a>Toda a celebração ocorrerá na propriedade do Hotel, BR-282, KM 228 (88514-890)</p>
+                </div>
+                <div class="details-item">
+                    <img src="./images/dresscode.svg" alt="Ícone de Dresscode">
+                    <h5>Dress Code</h5>
+                    <p><a class="details-button" href="#">Traje Passeio Completo</a>Parte da cerimônia ocorrerá no gramado, sugerimos evitar saltos muito finos</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="full-width-grid-con">
+            <h3 class="hidden">RSVP</h3>
+            <div class="overlay"></div>
+            <div class="rsvp-con col-span-full">
+                <div>
+                <h4>RSVP</h4>
+                <p>Sua presença tornará nosso dia ainda mais especial! Pedimos que realize a confirmação até 15 de Fevereiro de 2026</p>
+                <a href="#" class="rsvp-button">Confirmar Presença</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gifts Section -->
+        <section id="presentes" class="grid-con">
+            <h3 class="hidden">Lista de Presentes</h3>
+            <div class="gifts-con col-span-full">
+                <img src="./images/icone-presentes.svg" alt="Ícone de Presentes">
+                <h4>Lista de Presentes</h4>
+                <p>Ao invés de presentes tradicionais, criamos uma lista diferente — com experiências que farão parte da nossa lua de mel.</p>
+                <p>Cada presente ajudará a tornar esses dias ainda mais especiais, e vamos lembrar com carinho de vocês em todos os momentos vividos!</p>
+                <a href="#" class="gifts-button">Ver Lista</a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="grid-con">
+            <h3 class="hidden">Galeria de Fotos</h3>
+            <div class="divisory col-span-full"></div>
+            <div class="gallery-con col-span-full">
+                <h4>Aguardamos você!</h4>
+                <div class="gallery-items">
+                    <a class="gallery-pic"><img src="./images/foto-casal-1.webp" alt="Foto do Casal">
+                    </a>
+                    <a class="gallery-pic"><img src="./images/foto-casal-2.webp" alt="Foto do Casal">
+                    </a>
+                    <a class="gallery-pic"><img src="./images/foto-casal-3.webp" alt="Foto do Casal">
+                    </a>
+                    <a class="gallery-pic"><img src="./images/foto-casal-4.webp" alt="Foto do Casal">
+                    </a>
+                    <a class="gallery-pic"><img src="./images/foto-casal-5.webp" alt="Foto do Casal">
+                    </a>
+                    <a class="gallery-pic"><img src="./images/foto-casal-6.webp" alt="Foto do Casal">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Container -->
+        <div class="help-con full-width-grid-con">
+                <p class="help-text col-span-full">Precisa de ajuda para se organizar ou tem alguma dúvida?<br></p>
+                <a href="#">Converse com a ORGANIZAÇÃO</a>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer full-width-grid-con">
+            <h3 class="hidden">Footer</h3>
+            <div class="footer-con col-span-full">
+                <a href="#" class="back-to-top">
+                    Voltar ao topo <i class="fa-solid fa-arrow-up"></i>
+                </a>
+                <h4 class="footer-date">18 de Abril de 2026</h4>
+                <p class="footer-location">Boqueirão Hotel Fazenda<br>Rodovia BR-282, KM 228, Lages, SC</p>   
+            </div>
+            <img class="footer-image col-span-full" src="./images/ilustracao-rodape.png" alt="Ilustração de Rodapé">
+        </footer>
+    </main>
+</body>
+
+</html>
