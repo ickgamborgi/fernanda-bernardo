@@ -69,7 +69,7 @@
                     <ul>
                         <li><a href="index.html" class="nav-item"><h5>Início</h5></a></li>
                         <li><a href="index.html#detalhes" class="nav-item"><h5>Detalhes</h5></a></li>
-                        <li><a href="index.html#rsvp" class="nav-item"><h5>RSVP</h5></a></li>
+                        <li><a href="https://forms.gle/bKocsmYBLLkuvXaW7" target="_blank" class="nav-item"><h5>RSVP</h5></a></li>
                         <li><a href="presentes.html" class="nav-item"><h5>Presentes</h5></a></li>
                     </ul>
                 </div>
@@ -85,161 +85,207 @@
         <section id="presentes" class="grid-con">
             <h3 class="hidden">Lista de Presentes</h3>
             <div class="gifts-con col-span-full">
-                <img src="./images/icone-presentes.svg" alt="Ícone de Presentes">
-                <h4>Lista de Presentes</h4>
+                <img src="./images/icon-luademel.svg" alt="Ícone de Lua de Mel">
+                <h4>Nossa Lua de Mel dos Sonhos</h4>
                 <p>Depois de celebrarmos o amor junto com vocês, vamos embarcar na viagem de Lua de Mel que sempre sonhamos: um safári na África do Sul e dias de descanso nas praias das Ilhas Maurício!</p>
-                <p>Ao invés de presentes tradicionais, criamos uma lista um pouco diferente — com experiências que farão parte da nossa lua de mel!</p>
-                <p>Cada presente e ajuda no início dessa nova jornada irá com certeza tornar esses dias ainda mais especiais, e vamos lembrar com carinho de vocês em todos os momentos vividos!</p>
+                <p>Ao invés de presentes tradicionais, criamos uma lista um pouco diferente — com experiências que farão parte da nossa lua de mel! É claro, qualquer presente é válido e ajuda no início da nossa nova jornada, iremos lembrar com carinho de vocês em todos os momentos vividos na nossa viagem!</p>
                 </div>
         </section>
+
+        <!-- Gift Modal (hidden by default) -->
+        <div id="gift-modal-overlay" class="gift-modal-overlay" aria-hidden="true">
+            <button class="gift-modal-close" aria-label="Fechar modal"><span aria-hidden="true">&times;</span></button>
+
+            <div class="gift-modal" role="dialog" aria-modal="true" aria-labelledby="gift-modal-title" tabindex="-1">
+                <div class="gift-modal-content">
+                    <img src="" alt="" class="gift-modal-image">
+                    <h3 id="gift-modal-title">Muito obrigado!</h3>
+                    <p class="gift-modal-message">Nós vamos com certeza amar este presente, e lembrar de você com muito carinho enquanto estivermos vivendo este sonho...</p>
+                    <p class="gift-modal-item">Presente: <strong class="gift-modal-name"></strong></p>
+                    <p class="gift-modal-value">Valor a Transferir: <strong class="gift-modal-price"></strong></p>
+                    <p class="gift-modal-follow">Para prosseguir com seu presente, <span>copie a chave PIX abaixo</span> e cole no aplicativo do seu banco — o valor já vai diretamente para os noivos</p>
+                    <p class="gift-modal-link">Você também pode acessar o link abaixo para <a href="https://forms.gle/8DNmSURraGZSoXNd7" target="_blank">deixar uma mensagem</a> junto com seu presente — leremos com muito carinho durante nossa viagem</p>
+
+                    <div class="gift-modal-actions">
+                        <button class="pix-copy-btn" type="button" data-pix="d82ed825-811f-4223-9b49-aa7bdaea4b65">Copiar chave PIX</button>
+                        <a class="gift-thank-link" href="https://forms.gle/8DNmSURraGZSoXNd7" target="_blank">Deixar Mensagem</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section id="presentes-lista" class="grid-con">
             <div class="gift-list-con col-span-full">
                 <!-- Gift: Visita ao Museu do Apartheid -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/apartheid.webp" alt="Museu do Apartheid">
                     <div class="gift-info">
                         <h5>Visita ao Museu do Apartheid</h5>
                         <p>R$<span>270</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Visita à Table Mountain -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/table-mountain.webp" alt="Table Mountain">
                     <div class="gift-info">
                         <h5>Visita à Table Mountain</h5>
                         <p>R$<span>350</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Almoço na Savana Africana -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/savana.webp" alt="Almoço na Savana">
                     <div class="gift-info">
                         <h5>Almoço na Savana Africana</h5>
                         <p>R$<span>400</span></p>
                     </div>
-                </a>xw
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Jantar romântico Ilhas Maurício -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/jantar-ilhas.webp" alt="Jantar Romântico">
                     <div class="gift-info">
-                        <h5>Jantar romântico nas Ilhas Maurício</h5>
+                        <h5>Jantar nas Ilhas Maurício</h5>
                         <p>R$<span>500</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Rota cênica Cape Town -> Cabo -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/scenic-route.webp" alt="Rota Cênica">
                     <div class="gift-info">
-                        <h5>Tour pela rota cênica (Cape Town → Cabo da Boa Esperança)</h5>
+                        <h5>Tour por Cape Town e Cabo da Boa Esperança</h5>
                         <p>R$<span>600</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Caiaque & Snorkeling Le Morne -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/caiaque-snorkel.webp" alt="Caiaque e Snorkeling">
                     <div class="gift-info">
-                        <h5>Passeio de caiaque &amp; Snorkeling em Le Morne</h5>
+                        <h5>Passeio de Kayak em Le Morne</h5>
                         <p>R$<span>650</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Spa para o casal -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/spa-casal.webp" alt="Spa para o casal">
                     <div class="gift-info">
                         <h5>Spa para o casal no Resort</h5>
                         <p>R$<span>700</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Vinícola Stellenbosch -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/vinicola.webp" alt="Vinícola Stellenbosch">
                     <div class="gift-info">
-                        <h5>Tour em vinícola em Stellenbosch</h5>
+                        <h5>Tour por Vinícola em Stellenbosch</h5>
                         <p>R$<span>800</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Dia de praia paradisíaca -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/praia-paradisiaca.webp" alt="Praia Paradisíaca">
                     <div class="gift-info">
                         <h5>Dia relax em praia paradisíaca</h5>
                         <p>R$<span>900</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Safari diurno Kruger -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/safari-kruger.webp" alt="Safari Kruger">
                     <div class="gift-info">
-                        <h5>Em busca dos Big 5 - Safari diurno no Kruger</h5>
+                        <h5>Safari diurno no Kruger (Em Busca dos Big 5)</h5>
                         <p>R$<span>1.000</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Sunset + Safari noturno -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/safari-noite.webp" alt="Safari Noturno">
                     <div class="gift-info">
-                        <h5>Sunset na savana + Safari noturno</h5>
+                        <h5>Sunset na Savana + Safari noturno</h5>
                         <p>R$<span>1.200</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Scuba diving -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/scuba-diving.webp" alt="Scuba Diving">
                     <div class="gift-info">
                         <h5>Scuba diving nas Ilhas Maurício</h5>
                         <p>R$<span>1.500</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Passeio de barco -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/passeio-barco.webp" alt="Passeio de Barco">
                     <div class="gift-info">
                         <h5>Passeio de barco pelas Ilhas Maurício</h5>
                         <p>R$<span>2.000</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Noite em tenda de luxo -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/noite-tenda.webp" alt="Noite em tenda de luxo">
                     <div class="gift-info">
                         <h5>Noite em tenda de luxo no Sabi Sands Reserve</h5>
                         <p>R$<span>3.000</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Catamarã privativo -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/catamara.webp" alt="Catamarã Privativo">
                     <div class="gift-info">
-                        <h5>Full-day em catamarã privativo pelas Ilhas Maurício</h5>
+                        <h5>Catamarã privativo pelas Ilhas Maurício</h5>
                         <p>R$<span>4.000</span></p>
                     </div>
-                </a>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
                 <!-- Gift: Cota viagem dos sonhos (valor livre) -->
-                <a class="gift" href="#">
+                <div class="gift">
                     <img src="./images/cota-viagem.webp" alt="Cota viagem dos sonhos">
                     <div class="gift-info">
                         <h5>Cota viagem dos sonhos</h5>
                         <p><span>Livre</span></p>
                     </div>
-                </a>
-            </div>
+                    <a href="#"class="gift-list-button">Presentear</a>
+                </div>
 
+        </section>
+
+        <!-- Counter Section -->
+        <section id="counter" class="grid-con">
+            <h3 class="hidden">Contador para o Grande Dia</h3>
+            <div class="counter-con col-span-full">
+                <h4 class="counter-title" id="countdown-container">
+                    Faltam ... dias e ... horas para o Grande Momento
+                </h4>
+            </div>
         </section>
 
         <!-- Help Container -->

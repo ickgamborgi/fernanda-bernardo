@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as a;
+
+#counter {
+    margin-top: a.$section-gap /2;
+}
+
+.counter-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.counter-title {
+    font-family: a.$montecarlo;
+    font-size: 48px;
+    color: a.$light-green;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 1px;
+
+    .counter-number {
+        font-family: a.$caveat;
+        font-size: 64px;
+        font-weight: 200;
+        display: block;
+        letter-spacing: -8px;
+        color: a.$light-green;
+    }
+
+    .counter-highlight {
+        font-family: a.$caveat;
+        font-size: 64px;
+        font-weight: 200;
+        letter-spacing: -8px;
+        color: a.$light-green;
+    }
+}
+
+.counter-message {
+    font-family: a.$montecarlo;
+    font-size: 32px;
+    color: a.$light-green;
+    font-weight: 800;
+    margin: 0;
+}
+
+// Responsive
+@media (max-width: 767px) {
+    .counter-con {
+        padding: 30px 16px;
+        gap: 16px;
+    }
+
+    .counter-title {
+        font-size: 36px;
+
+        .counter-number {
+            font-size: 48px;
+        }
+    }
+
+    .counter-message {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-title {
+        font-size: 28px;
+
+        .counter-number {
+            font-size: 40px;
+        }
+    }
+
+    .counter-message {
+        font-size: 20px;
+    }
+}
