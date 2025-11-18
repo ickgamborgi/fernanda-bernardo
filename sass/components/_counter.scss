@@ -21,6 +21,11 @@
     font-weight: 400;
     margin: 0;
     letter-spacing: 1px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
     .counter-number {
         font-family: a.$caveat;
@@ -56,6 +61,7 @@
 
     .counter-title {
         font-size: 36px;
+        min-height: 160px;
 
         .counter-number {
             font-size: 48px;
@@ -70,6 +76,7 @@
 @media (max-width: 480px) {
     .counter-title {
         font-size: 28px;
+        min-height: 140px;
 
         .counter-number {
             font-size: 40px;
