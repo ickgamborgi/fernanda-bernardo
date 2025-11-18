@@ -1,9 +1,15 @@
 import { initHeader } from "./modules/header.js";
 import { initGallery } from "./modules/gallery.js";
+import { initGiftModal } from "./modules/giftModal.js";
+import { initFaq } from "./modules/faq.js";
+import { initCounter } from "./modules/counter.js";
 
 console.log("javascript file is linked");
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   initGallery();
+  initGiftModal();
+  initFaq();
+  initCounter();
 });

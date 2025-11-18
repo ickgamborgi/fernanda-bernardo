@@ -39,10 +39,10 @@ function createGalleryModal(imgSrc, imgAlt) {
   closeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   closeBtn.type = "button";
 
-  // Adiciona a imagem e o botão ao modal
+  // Adiciona a imagem ao modal
   galleryModal.appendChild(img);
 
-  // Adiciona modal ao overlay
+  // Adiciona modal ao overlay e o botão de fechar como irmão do modal (posicionado fixo)
   galleryOverlay.appendChild(galleryModal);
   galleryOverlay.appendChild(closeBtn);
 

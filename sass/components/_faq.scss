@@ -1,0 +1,138 @@
+@use "../abstracts/variables" as a;
+
+#faq {
+    margin-top: a.$section-gap;
+}
+
+.faq-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 40px;
+
+    img {
+        width: 100px;
+    }
+
+    h4 {
+        font-family: a.$montecarlo;
+        font-size: a.$title;
+        text-transform: capitalize;
+        color: a.$light-green;
+        font-weight: 800;
+    }
+
+    p {
+        line-height: 130%;
+        font-size: a.$body;
+        color: a.$green;
+        font-weight: 100;
+        max-width: 500px;
+
+        &:last-of-type {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.faq-item {
+    border: 1px solid a.$olive-green;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 16px;
+    font-family: a.$eb-garamond;
+    font-size: a.$body;
+    color: a.$olive-green;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: a.$basic-transition;
+
+    &:hover {
+        background-color: rgba(11, 43, 26, 0.05);
+        transition: a.$basic-transition;
+    }
+
+    &.active {
+        background-color: a.$light-green;
+        color: white;
+    }
+}
+
+.faq-toggle {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba(11, 43, 26, 0.02);
+    color: a.$olive-green;
+
+
+    &.active {
+        max-height: 500px;
+        transition: max-height 0.3s ease;
+    }
+}
+
+.faq-answer-content {
+    padding: 16px;
+    font-family: a.$eb-garamond;
+    font-size: a.$body;
+    line-height: 150%;
+    color: a.$light-green;
+    font-weight: 100;
+
+    a {
+        text-decoration: underline;
+        color: a.$olive-green;
+
+        &:hover {
+            color: a.$green;
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 767px) {
+    .faq-list {
+        padding: 0 12px;
+    }
+
+    .faq-question {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .faq-answer-content {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

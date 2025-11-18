@@ -39,10 +39,10 @@
 }
 
 .gifts-button, .gift-list-button {
-        border: 1px solid a.$olive-green;
+        border: 1px solid a.$green;
         padding: 15px 30px;
-        color: a.$olive-green;
-        background-color: transparent;
+        color: white;
+        background-color: a.$green;
         font-family: a.$eb-garamond;
         font-size: a.$body;
         text-transform: uppercase;
@@ -53,8 +53,8 @@
         text-align: center;
 
         &:hover {
-            background-color: a.$green;
-            border: 1px solid a.$green;
+            background-color: a.$light-green;
+            border: 1px solid a.$light-green;
             color: a.$cream;
             box-shadow: a.$click-shadow;
             transition: a.$basic-transition;
@@ -74,11 +74,25 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
     justify-items: center;
-    align-content: start;
+    align-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.gift-list-con > .gift:nth-last-child(1):nth-child(3n + 1) {
+    grid-column: 2; /* coloca o item na coluna do meio */
+}
+
+
+/*
+    Center a single item on the last row of the grid.
+    - For 3-column desktop layout: if the last row contains exactly 1 item (total % 3 === 1)
+        select that item and place it on the middle column so it appears centered.
+    - For 2-column tablet layout (see media query below) we span the item across both columns
+        and constrain its width so it visually centers.
+*/
+
 
 .gift {
     box-shadow: a.$blur-shadow;
@@ -100,7 +114,18 @@
         box-shadow: a.$click-shadow;
         transition: a.$basic-transition;
         transform: scale(1.05);
+
+        .gift-list-button {
+
+            &:hover {
+            background-color: a.$light-green;
+            border: 1px solid a.$light-green;
+            color: a.$cream;
+            box-shadow: a.$click-shadow;
+            transition: a.$basic-transition;
+        }
     }
+}
 }
 
 .gift-info {
@@ -160,4 +185,217 @@
         text-align: center;
         gap: 12px;
     }
+}
+
+// ===== GIFT CONFIRMATION MODAL =====
+.gift-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10010;
+    opacity: 0;
+    pointer-events: none;
+    transition: a.$basic-transition;
+}
+
+.gift-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.gift-modal {
+    background: #fff;
+    width: 90%;
+    max-width: 520px;
+    box-shadow: a.$click-shadow;
+    position: relative;
+    padding: 25px;
+}
+
+.gift-modal-close {
+    position: absolute;
+    /* place near top-right of modal */
+    top: 3.5%;
+    right: 2.5%;
+    width: 44px;
+    height: 44px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 10011;
+}
+
+.gift-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+.gift-modal-close:hover {
+    background-color: rgba(65,85,52,0.64); /* similar to gallery hover */
+    transform: rotate(90deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+}
+
+.gift-modal-close span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gift-modal-image {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gift-modal-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.pix-copy-btn {
+        border: 1px solid a.$green;
+        padding: 15px 30px;
+        color: a.$cream;
+        background-color: a.$green;
+        font-family: a.$eb-garamond;
+        font-size: a.$body;
+        text-transform: uppercase;
+        box-shadow: a.$blur-shadow;
+        font-weight: 600;
+        transition: a.$basic-transition;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid a.$light-green;
+            background-color: a.$light-green;
+            color: white;
+            box-shadow: a.$click-shadow;
+            transition: a.$basic-transition;
+        }
+}
+
+.gift-thank-link {
+        border: 1px solid a.$light-green;
+        padding: 15px 30px;
+        color: a.$light-green;
+        background-color: transparent;
+        font-family: a.$eb-garamond;
+        font-size: a.$body;
+        text-transform: uppercase;
+        box-shadow: a.$blur-shadow;
+        font-weight: 600;
+        transition: a.$basic-transition;
+        cursor: pointer;
+
+        &:hover {
+            background-color: a.$light-olive;
+            color: a.$green;
+            box-shadow: a.$click-shadow;
+            transition: a.$basic-transition;
+        }
+}
+
+#gift-modal-title {
+    font-family: a.$montecarlo;
+    font-size: a.$subtitle;
+    font-weight: 800;
+    color: a.$light-green;
+    margin: 0;
+}
+
+.gift-modal-message {
+    font-family: a.$eb-garamond;
+    font-size: a.$body;
+    font-weight: 100;
+    color: a.$light-green;
+    line-height: 130%;
+    margin: 0;
+}
+
+.gift-modal-value {
+    margin-bottom: 10px;
+    border: 1px solid rgba(126, 126, 126, 0.459);
+    padding: 5px 15px;
+    width: 75%;
+    color: rgb(126, 126, 126);
+    line-height: 130%;
+    text-transform: uppercase;
+    font-family: a.$eb-garamond;
+
+    strong {
+        margin-left: 5px;
+        font-weight: 800;
+    }
+}
+
+.gift-modal-item {
+    margin-top: 10px;
+    border: 1px solid rgba(126, 126, 126, 0.459);
+    padding: 5px 15px;
+    width: 75%;
+    color: rgb(126, 126, 126);
+    text-transform: uppercase;
+    line-height: 130%;
+    font-family: a.$eb-garamond;
+
+    strong {
+        margin-left: 5px;
+        font-weight: 800;
+    }
+}
+
+.gift-modal-follow {
+    font-family: a.$eb-garamond;
+    font-size: a.$body;
+    font-weight: 100;
+    color: rgb(173, 1, 1);
+    line-height: 130%;
+    margin: 0;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.gift-modal-link {
+    font-family: a.$eb-garamond;
+    font-size: a.$body;
+    font-weight: 100;
+    color: a.$light-green;
+    line-height: 130%;
+    margin: 0;
+
+    a {
+        font-weight: 700;
+        color: a.$green;
+
+        &:hover {
+            color: a.$light-green;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-modal { padding: 14px; }
+    .gift-modal-image { max-width: 100%; }
+    .gift-modal-actions { flex-direction: column; width: 100%; }
+    .gift-thank-link, .pix-copy-btn { width: 100%; }
 }
