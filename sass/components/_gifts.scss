@@ -170,7 +170,8 @@
 @media (max-width: 767px) {
     /* Mobile: single column and stack gift-info vertically */
     .gift-list-con {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 16px;
         padding: 0 12px;
     }
@@ -396,6 +397,15 @@
 @media (max-width: 480px) {
     .gift-modal { padding: 14px; }
     .gift-modal-image { max-width: 100%; }
+    .gift-modal-actions { flex-direction: column; width: 100%; }
+    .gift-thank-link, .pix-copy-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .gift-modal { padding: 14px; }
+    .gift-modal-image { display: none; }
+    .gift-modal-item { display: none;}
+    .gift-modal-value { margin-top: 10px; }
     .gift-modal-actions { flex-direction: column; width: 100%; }
     .gift-thank-link, .pix-copy-btn { width: 100%; }
 }

@@ -46,7 +46,7 @@
         font-weight: 100;
         margin: 0;
         color: a.$cream;
-        font-size: a.$subtitle;
+        font-size: 24px;
         text-align: center;
     }
 }
@@ -123,11 +123,11 @@
 }
 
 .rsvp-con {
-    width: 75%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 500px;
     padding: 5px;
     background-color: #344128eb;
-    margin: 50px;
+    margin: 50px 0px;
     box-shadow: a.$blur-shadow;
 
     div {
@@ -188,6 +188,13 @@
 
     p {
         max-width: 300px;
+    }
+}
+
+.hero-date {
+
+    h4 {
+        font-size: a.$title;
     }
 }
 
