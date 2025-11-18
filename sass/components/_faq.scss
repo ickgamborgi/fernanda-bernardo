@@ -64,6 +64,7 @@
     cursor: pointer;
     font-weight: 600;
     display: flex;
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
     transition: a.$basic-transition;
@@ -93,7 +94,7 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: rgba(11, 43, 26, 0.02);
-    color: a.$olive-green;
+    color: a.$light-green;
 
 
     &.active {
@@ -110,12 +111,26 @@
     color: a.$light-green;
     font-weight: 100;
 
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+        font-weight: 600;
+
+        li {
+        margin-left: 15px;
+        list-style: disc;
+        list-style-position: inside;
+        }
+    }
+
     a {
         text-decoration: underline;
-        color: a.$olive-green;
+        color: a.$light-green;
 
         &:hover {
-            color: a.$green;
+            color: a.$olive-green;
         }
     }
 }
