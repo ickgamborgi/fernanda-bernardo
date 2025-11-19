@@ -75,49 +75,61 @@ export function initGSAP() {
     y: 40,
     duration: 1,
     ease: 'power3.out',
-    delay: 0.15,
 
   });
 
   gsap.from('.gallery-pic', {    
     scrollTrigger: {
       trigger: ".gallery-items",
-      toggleActions: "play none none none",
+      toggleActions: "play none none reset",
     },
     opacity: 0,
     y: 40,
     duration: 1,
     ease: 'power3.out',
-    delay: 0.15,
     stagger: 0.3,
+
+  });
+
+    gsap.from('.gifts-con img, .gifts-con h4', {    
+    scrollTrigger: {
+      trigger: ".gifts-con",
+      toggleActions: "play none none reset",
+    },
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    ease: 'power3.out',
+
+  });
+
+      gsap.from('.gifts-con p', {    
+    scrollTrigger: {
+      trigger: ".gifts-con",
+      toggleActions: "play none none reset",
+    },
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    ease: 'power3.out',
+    delay: 0.15,
+    stagger: .15,
 
   });
 
   gsap.from('.faq-item', {    
     scrollTrigger: {
       trigger: ".faq-item",
-      toggleActions: "play none none none",
+      toggleActions: "play none none reset",
     },
     opacity: 0,
     x: -20,
     duration: 1,
     ease: 'power3.out',
-    delay: 0.15,
     stagger: 0.3,
 
   });
 
-    gsap.from('.help-con', {
-    scrollTrigger: {
-      trigger: ".help-con",
-      toggleActions: "play none none none",
-    },
-    opacity: 0,
-    x: -40,
-    duration: 1,
-    ease: 'power3.out',
-    delay: 0.15,
-  });
 
       gsap.from('.gift', {
     scrollTrigger: {
@@ -128,7 +140,6 @@ export function initGSAP() {
     y: 30,
     duration: 1,
     ease: 'power3.out',
-    delay: 0.15,
     stagger: .15,
   });
   }

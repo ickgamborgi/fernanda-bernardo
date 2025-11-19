@@ -50,6 +50,8 @@
         box-shadow: a.$blur-shadow;
         transition: a.$basic-transition;
         cursor: pointer;
+        border-radius: a.$round-border;
+
         text-align: center;
 
         &:hover {
@@ -104,16 +106,21 @@
     width: 100%; /* take full width of the grid cell */
     transition: a.$basic-transition;
     cursor: pointer;
+        border-radius: a.$round-border;
+
 
     img {
         width: 100%;
         object-fit: cover;
+        border-top-left-radius: a.$round-border;
+        border-top-right-radius: a.$round-border;
     }
 
     &:hover {
-        box-shadow: a.$click-shadow;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: a.$basic-transition;
-        transform: scale(1.05);
+        transform: scale(3);
+    }
 
         .gift-list-button {
 
@@ -125,7 +132,6 @@
             transition: a.$basic-transition;
         }
     }
-}
 }
 
 .gift-info {
@@ -200,6 +206,7 @@
     opacity: 0;
     pointer-events: none;
     transition: a.$basic-transition;
+    
 }
 
 .gift-modal-overlay.active {
@@ -213,6 +220,8 @@
     max-width: 520px;
     box-shadow: a.$click-shadow;
     position: relative;
+        border-radius: a.$round-border;
+
     padding: 25px;
 }
 
@@ -233,6 +242,8 @@
     align-items: center;
     transition: all 0.3s ease;
     z-index: 10011;
+        border-radius: a.$round-border;
+
 }
 
 .gift-modal-content {
@@ -259,6 +270,8 @@
     height: 100px;
     width: 100%;
     object-fit: cover;
+    border-top-left-radius: a.$round-border;
+    border-top-right-radius: a.$round-border;
     object-position: center;
 }
 
@@ -282,6 +295,8 @@
         font-weight: 600;
         transition: a.$basic-transition;
         cursor: pointer;
+            border-radius: a.$round-border;
+
 
         &:hover {
             border: 1px solid a.$light-green;
@@ -295,6 +310,8 @@
 .gift-thank-link {
         border: 1px solid a.$light-green;
         padding: 15px 30px;
+            border-radius: a.$round-border;
+
         color: a.$light-green;
         background-color: transparent;
         font-family: a.$eb-garamond;
@@ -336,6 +353,8 @@
     padding: 5px 15px;
     width: 75%;
     color: rgb(126, 126, 126);
+        border-radius: a.$round-border;
+
     line-height: 130%;
     text-transform: uppercase;
     font-family: a.$eb-garamond;
@@ -351,6 +370,8 @@
     border: 1px solid rgba(126, 126, 126, 0.459);
     padding: 5px 15px;
     width: 75%;
+        border-radius: a.$round-border;
+
     color: rgb(126, 126, 126);
     text-transform: uppercase;
     line-height: 130%;
@@ -394,18 +415,15 @@
     }
 }
 
-@media (max-width: 480px) {
-    .gift-modal { padding: 14px; }
-    .gift-modal-image { max-width: 100%; }
-    .gift-modal-actions { flex-direction: column; width: 100%; }
-    .gift-thank-link, .pix-copy-btn { width: 100%; }
-}
 
 @media (max-width: 480px) {
     .gift-modal { padding: 14px; }
-    .gift-modal-image { display: none; }
-    .gift-modal-item { display: none;}
-    .gift-modal-value { margin-top: 10px; }
+    .gift-modal-content { gap: 10px; }
+    .gift-modal-image { height: 75px; }
+    .gift-modal-item { font-size: 12px; margin-top: 5px;}
+    .gift-modal-follow { font-size: 12px; }
+    .gift-modal-value { margin-top: 0px; font-size: 12px; }
+    .gift-modal-link { font-size: 12px; margin-top: 5px; }
     .gift-modal-actions { flex-direction: column; width: 100%; }
-    .gift-thank-link, .pix-copy-btn { width: 100%; }
+    .gift-thank-link, .pix-copy-btn { width: 100%; font-size: 12px; }
 }

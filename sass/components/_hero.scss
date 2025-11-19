@@ -27,18 +27,20 @@
     margin-top: -50px;
     margin-bottom: 50px;
     background-color: #344128;
-    box-shadow: a.$blur-shadow;
+    box-shadow: a.$click-shadow;
+    border-radius: a.$round-border;
     width: 75%;
     max-width: 500px;  
 }
 
 .hero-date {
     background-color: a#344128eb;
-    border: 1px solid a.$cream;
+    border: 1px solid a.$cream-transparent;
     margin: 5px;
     padding: 25px;
     display: flex;
     justify-content: center;
+    border-radius: a.$round-border;
     align-items: center;
 
     h4 {
@@ -78,7 +80,9 @@
     text-align: center;
     box-shadow: a.$blur-shadow;
     padding: 50px;
-    
+    border-radius: a.$round-border;
+
+
     img {
         height: 75px;
     }
@@ -129,9 +133,12 @@
     background-color: #344128eb;
     margin: 50px 0px;
     box-shadow: a.$blur-shadow;
+    border-radius: a.$round-border;
+
 
     div {
-        border: 1px solid a.$cream;
+        border: 1px solid a.$cream-transparent;
+        border-radius: a.$round-border;
         height: 100%;
         padding: 20px;
         width: 100%;
@@ -172,6 +179,7 @@
         font-weight: 600;
         transition: a.$basic-transition;
         cursor: pointer;
+        border-radius: a.$round-border;
 
         &:hover {
             background-color: a.$green;

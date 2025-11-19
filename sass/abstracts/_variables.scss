@@ -11,6 +11,7 @@ $light-green:        #5e753f;
 $olive-green:  #98a769;
 $light-olive: #e5edc0;
 $cream:#fefdf0;
+$cream-transparent: #fefdf071;
 $grey: #8e8e8e;
 
 
@@ -27,8 +28,8 @@ $body: 15px;
 
 //Others
 $blur-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-$click-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+$click-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
-$round-border: 35px;
+$round-border: 8px;
 $section-gap: 100px;
 $basic-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);

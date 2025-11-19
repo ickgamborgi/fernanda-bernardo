@@ -7,7 +7,7 @@
   background-color: white;
   top: 0;
   z-index: 1000;
-  box-shadow: a.$click-shadow;
+  border-bottom: 1px solid a.$light-olive;
   animation: headerSlide 1s forwards;
 }
 
@@ -53,7 +53,7 @@
   transition: a.$basic-transition;
 
   &:hover {
-    border-radius: 0px;
+    border-radius: a.$round-border;
     background-color: #e8e8e860;
   }
 }
